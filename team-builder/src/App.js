@@ -4,25 +4,26 @@ import TeamForm from "./TeamForm";
 import "./App.css";
 
 function App() {
-  const [team, setTeam] = useState([
-    {
-      id: 1,
-      name: "Jackson McJackson",
-      role: "web developer",
-      favoriteColor: "Red"
-    }
-  ]);
+  const [team, setTeam] = useState([]);
+  // const [memberEdit, setMemberEdit] = useState([])
 
   const addMemberHandler = newMember => {
     setTeam([...team, newMember]);
     //updating state
   };
 
+  //EDIT BUTTON
+  // const editMember = editMember => {
+  //   setMemberEdit([...memberEdit, editMember]);
+  //   //updating state when edit button is clicked.
+  // }
+
   return (
-    <div>
-      <h1>Team Members</h1>
-      <Team team={team} />
-      <TeamForm addMember={addMemberHandler} />
+    <div className="App">
+      <div className="Header">
+        <TeamForm addMember={addMemberHandler} />
+        <Team team={team} />
+      </div>
     </div>
   );
 }
