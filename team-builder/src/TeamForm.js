@@ -39,7 +39,7 @@ const TeamForm = props => {
           name="name"
           value={listState.name}
           onChange={changeHandler}
-          placeholder="Name"
+          placeholder="Enter Name..."
         />
         <label htmlFor="role"> Role </label>{" "}
         <input
@@ -47,7 +47,7 @@ const TeamForm = props => {
           name="role"
           value={listState.role}
           onChange={changeHandler}
-          placeholder="Role"
+          placeholder="Enter Role..."
         />
         <label htmlFor="email"> Email </label>{" "}
         <input
@@ -55,9 +55,11 @@ const TeamForm = props => {
           name="email"
           value={listState.email}
           onChange={changeHandler}
-          placeholder="Email"
+          placeholder="Enter Email..."
         />
-        <button type="submit"> Add New Member! </button>
+        <button type="submit" data-text="Add New Member!">
+          Add New Member!
+        </button>
       </form>
     </div>
   );
